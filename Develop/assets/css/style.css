@@ -1,0 +1,67 @@
+/* Global attributes */
+* {
+    /* Color palette */
+    --lightest: #caf0f8;
+    --second-lightest: #ade8f4;
+    --third-lightest: #90e0ef;
+    --medium-light: #0096c7;
+    --medium: #00b4d8;
+    --medium-dark: #0096c7;
+    --third-darkest: #0077b6;
+    --second-darkest: #023e8a;
+    --darkest: #03045e;
+}
+
+body {
+    background-color: var(--second-darkest);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+}
+
+/* Hero section */
+.header {
+    padding: 20px;
+    font-size: 3.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--second-lightest);
+}
+
+.header h1 {
+    display: inline;
+    font-size: 48px;
+}
+
+/* Navigation menu */
+.header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    display: inline-flexbox;
+}
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul li {
+    display: inline-flex;
+    margin-left: 25px;
+}
+
+.menu-item {
+    color: var(--second-lightest);
+    text-decoration: none;
+}
+
+.hero {
+    height: 350px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/WebGeekBearHeader.png");
+    background-size: cover;
+    background-position: center;
+}
