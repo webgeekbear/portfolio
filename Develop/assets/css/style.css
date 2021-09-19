@@ -100,15 +100,57 @@ header nav ul li {
     background-repeat: no-repeat;
 }
 
-/* Content section */
+/* Content section headers */
+.content {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+
 .content h2 {
     display: inline-block;
     margin: 0;
     width: 25%;
 }
 
+/* About me */
 .about-me {
     flex-direction: row;
     float: right;
     width: 90vw;
+}
+
+/* Work section */
+.work ul li {
+    list-style-type: none;
+}
+
+/* One of the panels in the Work section */
+.work ul li img {
+    height: auto;
+    display: inline-block;
+}
+
+/* Contact section */
+.contact ul li {
+    list-style-type: none;
+}
+
+.contact ul li a {
+    text-decoration: underline;
+}
+
+.contact-item {
+    color: var(--second-lightest);
+    text-decoration: none;
+    float: left;
+    padding-right: 50px;
+}
+
+footer div a {
+    color: var(--third-lightest);
 }
