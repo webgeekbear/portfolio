@@ -151,6 +151,18 @@ header nav ul li {
     padding-right: 50px;
 }
 
+/* Contact information needs to collapse under name on smaller screens. */
+@media only screen and (max-width:600px) {
+    .contact {
+        display: block;
+    }
+
+    .contact-item {
+        float: none;
+    }
+}
+
+/* Footer display (attributions) */
 footer div a {
     color: var(--third-lightest);
 }
