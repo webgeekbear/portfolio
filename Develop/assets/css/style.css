@@ -12,10 +12,12 @@
     --darkest: #03045e;
 
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
     background-color: var(--second-darkest);
+    color: var(--second-lightest);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -25,9 +27,6 @@ body {
 /* Hero section */
 header {
     padding: 20px;
-    font-size: 3.5rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--second-lightest);
 }
 
 header h1 {
@@ -55,6 +54,13 @@ header nav ul li {
     margin-left: 25px;
 }
 
+.menu-item {
+    color: var(--second-lightest);
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Menu needs to collapse under name and center on smaller screens. */
 @media only screen and (max-width:900px) {
     header h1 {
         display: block;
@@ -80,21 +86,29 @@ header nav ul li {
         text-align: center;
         padding: 0;
     }
-
 }
 
-.menu-item {
-    color: var(--second-lightest);
-    text-decoration: none;
-    text-align: center;
-}
-
+/* Web page banner */
 .hero {
     min-height: 25vh;
     width: 100%;
     margin: 0;
+
     background-image: url("../images/WebGeekBearHeader.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+/* Content section */
+.content h2 {
+    display: inline-block;
+    margin: 0;
+    width: 25%;
+}
+
+.about-me {
+    flex-direction: row;
+    float: right;
+    width: 90vw;
 }
