@@ -54,7 +54,7 @@ header nav ul li {
     margin-left: 25px;
 }
 
-.menu-item {
+header nav ul li a {
     color: var(--second-lightest);
     text-decoration: none;
     text-align: center;
@@ -100,30 +100,16 @@ header nav ul li {
     background-repeat: no-repeat;
 }
 
-/* Content section headers */
-/*
-.content {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
-}
-*/
-
-/*
-.content h2 {
+/* Section headers */
+main section h2 {
     display: block;
     margin: 0;
     width: 25%;
-    float: left;
+    font-size: 30px;
 }
-*/
 
 /* About me */
-.about-me {
+main section p {
     flex-direction: row;
     float: right;
     width: 90vw;
@@ -132,65 +118,43 @@ header nav ul li {
 /* Work */
 .work {
     display: block;
-    margin-top: 30px;
-}
 
-.content h2,
-.work h2 {
-    display: block;
-    margin: 0;
-    width: 25%;
-    font-size: 30px;
+    /* TODO: Smaller values cause work to bleed up into the about me section */
+    margin-top: 40px;
 }
 
 .projects {
     flex: 1;
-    /* padding: 50px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.projects h2 {
-    padding: 0;
-    display: block;
-}
-
+/* Individual project */
 .card {
     padding: 10px;
     flex: 0 0 300px;
     margin: 20px;
 }
 
-.first-card {
+/* First card is bigger than others */
+.card:nth-child(1) {
     padding: 0;
     flex: 0 0 600px;
-}
-
-.card>header {
-    /*   border-radius: 50px 50px 0px 0px;
-    padding: 20px; */
-    text-align: center;
 }
 
 .card img {
     width: 100%;
 }
 
-/* 
-.card img:first {
-    width: 100%;
+.card>header {
+    text-align: center;
 }
-*/
 
-
+/* Shrink first child on smaller screens */
 @media screen and (max-width:700px) {
-    .first-card {
+    .card:nth-child(1) {
         flex: 0 0 300px;
-    }
-
-    .card img:first {
-        width: 100%;
     }
 }
 

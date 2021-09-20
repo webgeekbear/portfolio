@@ -13,35 +13,43 @@
 <body>
     <header title="David Barron" aria-labelledby="dpbarron">
         <h1 id="dpbarron">David Barron</h1>
+
+        <!-- Navigation menu -->
         <nav>
             <ul>
                 <li>
-                    <a href="#about-me" class="menu-item">About Me</a>
+                    <a href="#about-me">About Me</a>
                 </li>
                 <li>
-                    <a href="#work" class="menu-item">Work</a>
+                    <a href="#work">Work</a>
                 </li>
                 <li>
-                    <a href="#contact" class="menu-item">Contact Me</a>
+                    <a href="#contact-me">Contact Me</a>
                 </li>
             </ul>
         </nav>
     </header>
+
     <div class="hero"></div>
     <main title="Content" aria-label="Content">
-        <section class="content" title="About Me" aria-labelledby="about-me-text">
+        <section id="about-me" title="About Me" aria-labelledby="about-me-text">
             <h2 id="about-me-text">About Me</h2>
-            <p class="about-me">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam est obcaecati corrupti. Quos vero
-                quibusdam corrupti! Sint minus molestiae, praesentium, placeat debitis iusto eius, recusandae maiores
-                fugiat aliquid ducimus necessitatibus?
+            <p>
+                I'm a full-stack developer with 20 years of experience as a software developer. I have proficiency in
+                NoSQL, HTML, CSS, JavaScript, Python, C#, and Perl. I have designed and implemented object-oriented
+                solutions and used version control systems, such as VCS, subversion, and git.
             </p>
         </section>
+        <!-- 
+            This break helps prevent the work section from bleeding into the about section.
+        -->
         <br>
+
+        <!-- Projects completed with screen shots and links to the apps -->
         <section class="work" title="Work" aria-labelledby="work-text">
             <h2 id="work-text">Work</h2>
             <div class="projects">
-                <section class="card first-card">
+                <section class="card">
                     <header>Horiseon</header>
                     <a href="https://webgeekbear.github.io/Horiseon/Develop" target="_blank">
                         <img src="./assets/images/horiseon.png" alt="Horiseon">
@@ -74,11 +82,12 @@
             </div>
         </section>
         <br>
-        <section id="contact" class="contact" title="Contact" aria-labelledby="contact-text">
+
+        <section id="contact-me" class="contact" title="Contact" aria-labelledby="contact-text">
             <h2 id="contact-text">Contact Me</h2>
             <ul>
                 <li>
-                    <div class="contact-item" title="Phone Number">916-752-9927</div>
+                    <a href="tel:916-752-9927" class="contact-item" title="Phone">916-752-9927</a>
                 </li>
                 <li>
                     <a href="mailto:webgeekbear@gmail.com" class="contact-item" title="Email">Email</a>
@@ -96,7 +105,9 @@
     </main>
 </body>
 <br>
+
 <footer>
+    <!-- Attributions -->
     <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
             href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     <div>Under construction image from <a href="https://www.pikpng.com" title="PikPng">PikPng.com</a></div>
