@@ -124,15 +124,36 @@ header nav ul li {
     width: 90vw;
 }
 
-/* Work section */
-.work ul li {
-    list-style-type: none;
+.projects {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-/* One of the panels in the Work section */
-.work ul li img {
-    height: auto;
-    display: inline-block;
+.card {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    padding: 10px;
+    flex: 0 0 300px;
+    transform: rotate(8deg);
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin: 20px;
+}
+
+.card>header {
+    border-radius: 50px 50px 0px 0px;
+    padding: 20px;
+}
+
+.card>p {
+    text-align: center;
+}
+
+.card>img {
+    width: 100%;
 }
 
 /* Contact section */
