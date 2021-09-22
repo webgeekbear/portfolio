@@ -103,19 +103,19 @@ header nav ul li a {
     flex: 0 0 250px;
 }
 
-/* First card is bigger than others */
+/* First project image is bigger than others */
 .work div section:nth-child(1) {
     flex: 0 0 500px;
 }
 
-/* Except on smaller screens */
+/* First project image is smaller on smaller screens */
 @media only screen and (max-width:500px) {
     .work div section:nth-child(1) {
         flex: 0 0 250px;
     }
 }
 
-/* Ensure all of the work graphics display properly */
+/* Ensure all of the project images display properly */
 .work div section img {
     width: 100%;
 }
