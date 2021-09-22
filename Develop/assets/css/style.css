@@ -126,24 +126,42 @@ header nav ul li a {
 }
 
 /* Contact me section */
-.contact-me ul {
+.contact ul {
     display: inline-flex;
-    justify-content: space-between;    
+    justify-content: space-between;
     list-style-type: none;
 }
+
 /*
-.contact-me ul {
+.contact ul {
     display: flex;
 }
 */
-.contact-me ul li {
+.contact ul li {
     display: flex;
+    justify-content: space-between;
 }
 
-.contact-me ul li a {
+.contact ul li a {
     color: var(--color);
     text-decoration: underline;
-    float: left;
+    padding-left: 25px;
+}
+
+@media screen and (max-width:550px) {
+
+    /*
+    .contact {
+        display: block;
+    }
+*/
+    .contact ul {
+        display: block;
+    }
+
+    .contact ul li {
+        display: block;
+    }
 }
 
 /* Footer (attributions) */
