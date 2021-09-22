@@ -84,7 +84,6 @@ header nav ul li a {
     background-image: url("../images/WebGeekBearHeader.png");
     background-position: center;
     background-size: cover;
-
 }
 
 /* Hero graphic gets cut off on larger screens */
@@ -132,11 +131,6 @@ header nav ul li a {
     list-style-type: none;
 }
 
-/*
-.contact ul {
-    display: flex;
-}
-*/
 .contact ul li {
     display: flex;
     justify-content: space-between;
@@ -148,13 +142,8 @@ header nav ul li a {
     padding-left: 25px;
 }
 
+/* Contact section displays in columns on smaller screens */
 @media screen and (max-width:550px) {
-
-    /*
-    .contact {
-        display: block;
-    }
-*/
     .contact ul {
         display: block;
     }
