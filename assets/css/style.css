@@ -1,0 +1,159 @@
+/* Global attributes */
+* {
+    /* Color palette */
+    --lightest: #caf0f8;
+    --second-lightest: #ade8f4;
+    --third-lightest: #90e0ef;
+    --medium-light: #0096c7;
+    --medium: #00b4d8;
+    --medium-dark: #0096c7;
+    --third-darkest: #0077b6;
+    --second-darkest: #023e8a;
+    --darkest: #03045e;
+
+    /* 
+        Values for specific properties.  
+    */
+    --color: var(--lightest);
+    --background-color: var(--second-darkest);
+    --menu-color: var(--medium);
+}
+
+body {
+    color: var(--color);
+    background-color: var(--background-color);
+
+    display: inline-flex;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* 
+    Display name and menu on a single line, with the name at the left and the 
+    menu on the right.
+*/
+header {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+header nav ul li a {
+    font-size: larger;
+    text-decoration: none;
+    color: var(--color);
+    padding-left: 30px;
+}
+
+/* Collapse menu under name as a column and center on small screens */
+@media screen and (max-width:700px) {
+    header {
+        display: block;
+    }
+
+    header nav ul {
+        display: block;
+        background-color: var(--menu-color);
+        padding-left: 0;
+    }
+
+    header nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        padding-left: 0;
+    }
+}
+
+/* Web page banner */
+.hero {
+    min-height: 25vh;
+    width: 100%;
+    margin: 0;
+
+    background-image: url("../images/WebGeekBearHeader.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* Hero graphic gets cut off on larger screens */
+@media screen and (min-width:900px) {
+    .hero {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.work div {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.work div section {
+    flex: 0 0 250px;
+}
+
+/* First project image is bigger than others */
+.work div section:nth-child(1) {
+    flex: 0 0 500px;
+}
+
+/* First project image is smaller on smaller screens */
+@media only screen and (max-width:500px) {
+    .work div section:nth-child(1) {
+        flex: 0 0 250px;
+    }
+}
+
+/* Ensure all of the project images display properly */
+.work div section img {
+    width: 100%;
+}
+
+.work div section>header {
+    text-align: center;
+}
+
+/* Contact me section */
+.contact ul {
+    display: inline-flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.contact ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact ul li a {
+    color: var(--color);
+    text-decoration: underline;
+    padding-left: 25px;
+}
+
+/* Contact section displays in columns on smaller screens */
+@media screen and (max-width:550px) {
+    .contact ul {
+        display: block;
+    }
+
+    .contact ul li {
+        display: block;
+    }
+}
+
+/* Footer (attributions) */
+footer div a {
+    color: var(--color);
+}
