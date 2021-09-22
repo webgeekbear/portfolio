@@ -11,80 +11,67 @@
     --second-darkest: #023e8a;
     --darkest: #03045e;
 
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* 
+        Values for specific properties.  
+    */
+    --color: var(--lightest);
+    --background-color: var(--second-darkest);
+    --menu-color: var(--medium);
 }
 
 body {
-    background-color: var(--second-darkest);
-    color: var(--second-lightest);
-    display: flex;
+    color: var(--color);
+    background-color: var(--background-color);
+
+    display: inline-flex;
     flex-direction: column;
-    justify-content: flex-start;
-    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* Hero section */
+/* 
+    Display name and menu on a single line, with the name at the left and the 
+    menu on the right.
+*/
 header {
-    padding: 20px;
-}
-
-header h1 {
-    display: inline;
-    font-size: 48px;
-}
-
-/* Navigation menu */
-header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
+    display: inline-flex;
+    justify-content: space-between;
 }
 
 header nav ul {
-    list-style-type: none;
+    display: flex;
 }
 
 header nav ul li {
     display: inline-flex;
-    margin-left: 25px;
+    justify-content: flex-end;
 }
 
 header nav ul li a {
-    color: var(--second-lightest);
+    font-size: larger;
     text-decoration: none;
-    text-align: center;
+    color: var(--color);
+    padding-left: 30px;
 }
 
-/* Menu needs to collapse under name and center on smaller screens. */
-@media only screen and (max-width:900px) {
-    header h1 {
+/* Collapse menu under name as a column and center on small screens */
+@media screen and (max-width:700px) {
+    header {
         display: block;
-        float: none;
-        padding: 0;
-    }
-
-    header nav {
-        background-color: var(--medium-dark);
-        display: block;
-        text-align: center;
-        width: 100%;
-        margin-right: 0px;
     }
 
     header nav ul {
-        padding: 0;
+        display: block;
+        background-color: var(--menu-color);
+        padding-left: 0;
     }
 
     header nav ul li {
-        margin-left: 0px;
         display: block;
         text-align: center;
-        padding: 0;
+    }
+
+    header nav ul li a {
+        padding-left: 0;
     }
 }
 
@@ -96,96 +83,70 @@ header nav ul li a {
 
     background-image: url("../images/WebGeekBearHeader.png");
     background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
-/* Section headers */
-main section h2 {
-    display: block;
-    margin: 0;
-    width: 25%;
-    font-size: 30px;
+/* Hero graphic gets cut off on larger screens */
+@media screen and (min-width:900px) {
+    .hero {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
-/* About me */
-main section p {
-    flex-direction: row;
-    float: right;
-    width: 90vw;
-}
-
-/* Work */
-.work {
-    display: block;
-
-    /* TODO: Smaller values cause work to bleed up into the about me section */
-    margin-top: 40px;
-}
-
-.projects {
-    flex: 1;
-    display: flex;
+.work div {
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: flex;
 }
 
-/* Individual project */
-.card {
-    padding: 10px;
-    flex: 0 0 300px;
-    margin: 20px;
+.work div section {
+    flex: 0 0 250px;
 }
 
 /* First card is bigger than others */
-.card:nth-child(1) {
-    padding: 0;
-    flex: 0 0 600px;
+.work div section:nth-child(1) {
+    flex: 0 0 500px;
 }
 
-.card img {
+/* Except on smaller screens */
+@media only screen and (max-width:500px) {
+    .work div section:nth-child(1) {
+        flex: 0 0 250px;
+    }
+}
+
+/* Ensure all of the work graphics display properly */
+.work div section img {
     width: 100%;
 }
 
-.card>header {
+.work div section>header {
     text-align: center;
 }
 
-/* Shrink first child on smaller screens */
-@media screen and (max-width:700px) {
-    .card:nth-child(1) {
-        flex: 0 0 300px;
-    }
-}
-
-/* Contact section */
-.contact ul li {
+/* Contact me section */
+.contact-me ul {
+    display: inline-flex;
+    justify-content: space-between;    
     list-style-type: none;
 }
+/*
+.contact-me ul {
+    display: flex;
+}
+*/
+.contact-me ul li {
+    display: flex;
+}
 
-.contact ul li a {
+.contact-me ul li a {
+    color: var(--color);
     text-decoration: underline;
-}
-
-.contact-item {
-    color: var(--second-lightest);
-    text-decoration: none;
     float: left;
-    padding-right: 50px;
 }
 
-/* Contact information needs to collapse under name on smaller screens. */
-@media only screen and (max-width:600px) {
-    .contact {
-        display: block;
-    }
-
-    .contact-item {
-        float: none;
-    }
-}
-
-/* Footer display (attributions) */
+/* Footer (attributions) */
 footer div a {
-    color: var(--third-lightest);
+    color: var(--color);
 }

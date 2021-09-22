@@ -1,0 +1,191 @@
+/* Global attributes */
+* {
+    /* Color palette */
+    --lightest: #caf0f8;
+    --second-lightest: #ade8f4;
+    --third-lightest: #90e0ef;
+    --medium-light: #0096c7;
+    --medium: #00b4d8;
+    --medium-dark: #0096c7;
+    --third-darkest: #0077b6;
+    --second-darkest: #023e8a;
+    --darkest: #03045e;
+
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--second-darkest);
+    color: var(--second-lightest);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Hero section */
+header {
+    padding: 20px;
+}
+
+header h1 {
+    display: inline;
+    font-size: 48px;
+}
+
+/* Navigation menu */
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-flex;
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--second-lightest);
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Menu needs to collapse under name and center on smaller screens. */
+@media only screen and (max-width:900px) {
+    header h1 {
+        display: block;
+        float: none;
+        padding: 0;
+    }
+
+    header nav {
+        background-color: var(--medium-dark);
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    header nav ul {
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin-left: 0px;
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+/* Web page banner */
+.hero {
+    min-height: 25vh;
+    width: 100%;
+    margin: 0;
+
+    background-image: url("../images/WebGeekBearHeader.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Section headers */
+main section h2 {
+    display: block;
+    margin: 0;
+    width: 25%;
+    font-size: 30px;
+}
+
+/* About me */
+main section p {
+    flex-direction: row;
+    float: right;
+    width: 90vw;
+}
+
+/* Work */
+.work {
+    display: block;
+
+    /* TODO: Smaller values cause work to bleed up into the about me section */
+    margin-top: 40px;
+}
+
+.projects {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Individual project */
+.card {
+    padding: 10px;
+    flex: 0 0 300px;
+    margin: 20px;
+}
+
+/* First card is bigger than others */
+.card:nth-child(1) {
+    padding: 0;
+    flex: 0 0 600px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card>header {
+    text-align: center;
+}
+
+/* Shrink first child on smaller screens */
+@media screen and (max-width:700px) {
+    .card:nth-child(1) {
+        flex: 0 0 300px;
+    }
+}
+
+/* Contact section */
+.contact ul li {
+    list-style-type: none;
+}
+
+.contact ul li a {
+    text-decoration: underline;
+}
+
+.contact-item {
+    color: var(--second-lightest);
+    text-decoration: none;
+    float: left;
+    padding-right: 50px;
+}
+
+/* Contact information needs to collapse under name on smaller screens. */
+@media only screen and (max-width:600px) {
+    .contact {
+        display: block;
+    }
+
+    .contact-item {
+        float: none;
+    }
+}
+
+/* Footer display (attributions) */
+footer div a {
+    color: var(--third-lightest);
+}
