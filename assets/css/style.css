@@ -94,9 +94,10 @@ header nav ul li a {
     }
 }
 
+/* Display of graphics of projects completed */
 .work div {
-    flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .work div section {
