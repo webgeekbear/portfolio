@@ -1,5 +1,5 @@
 /* Global attributes */
-* {
+:root {
     /* Color palette */
     --lightest: #caf0f8;
     --second-lightest: #ade8f4;
@@ -83,15 +83,8 @@ header nav ul li a {
 
     background-image: url("../images/WebGeekBearHeader.png");
     background-position: center;
-    background-size: cover;
-}
-
-/* Hero graphic gets cut off on larger screens */
-@media screen and (min-width:900px) {
-    .hero {
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+    background-size:contain;
+    background-repeat: no-repeat;
 }
 
 /* Display of graphics of projects completed */
@@ -112,7 +105,7 @@ header nav ul li a {
 /* First project image is smaller on smaller screens */
 @media only screen and (max-width:500px) {
     .work div section:nth-child(1) {
-        flex: 0 0 250px;
+        flex: 0 0 350px;
     }
 }
 
