@@ -105,7 +105,7 @@ header nav ul li a {
 /* First project image is smaller on smaller screens */
 @media only screen and (max-width:500px) {
     .work div section:nth-child(1) {
-        flex: 0 0 250px;
+        flex: 0 0 350px;
     }
 }
 

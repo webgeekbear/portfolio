@@ -1,6 +1,6 @@
 # David Barron's Portfolio
 
-![Logo](./Develop/assets/images/WebGeekBear.png)
+![Logo](./assets/images/WebGeekBear.png)
 
 ## About Me
 
